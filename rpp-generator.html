@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generator RPP Pembelajaran Mendalam</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, button, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    textarea {
+      margin-top: 20px;
+      height: 600px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧠 Generator RPP Pembelajaran Mendalam</h1>
+
+  <label>Nama Guru:</label>
+  <input type="text" id="namaGuru">
+
+  <label>Nama Sekolah:</label>
+  <input type="text" id="namaSekolah">
+
+  <label>Mata Pelajaran:</label>
+  <input type="text" id="mataPelajaran">
+
+  <label>Alokasi Waktu:</label>
+  <input type="text" id="alokasiWaktu">
+
+  <label>Topik Pembelajaran:</label>
+  <input type="text" id="topikPembelajaran">
+
+  <label>Materi Spesifik:</label>
+  <input type="text" id="materiSpesifik">
+
+  <label>Fase:</label>
+  <select id="fase">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="F">F</option>
+  </select>
+
+  <button onclick="generateRPP()">📝 Buat RPP</button>
+
+  <textarea id="output" readonly placeholder="RPP akan muncul di sini..."></textarea>
+
+  <script>
+    function generateRPP() {
+      const namaGuru = document.getElementById("namaGuru").value;
+      const namaSekolah = document.getElementById("namaSekolah").value;
+      const mataPelajaran = document.getElementById("mataPelajaran").value;
+      const alokasiWaktu = document.getElementById("alokasiWaktu").value;
+      const topikPembelajaran = document.getElementById("topikPembelajaran").value;
+      const materiSpesifik = document.getElementById("materiSpesifik").value;
+      const fase = document.getElementById("fase").value;
+
+      const rpp = `🧠 PERENCANAAN PEMBELAJARAN MENDALAM
+
+Nama Guru: ${namaGuru}
+Nama Sekolah: ${namaSekolah}
+Mata Pelajaran: ${mataPelajaran}
+Alokasi Waktu: ${alokasiWaktu}
+Topik Pembelajaran: ${topikPembelajaran}
+Materi Spesifik: ${materiSpesifik}
+Fase: ${fase}
+
+📌 IDENTIFIKASI DIMENSI PROFIL LULUSAN
+1. Mengidentifikasi kesiapan peserta didik
+2. Memahami karakteristik materi pelajaran
+3. Menentukan dimensi profil lulusan:
+   - Keimanan dan ketakwaan kepada Tuhan Yang Maha Esa
+   - Kewargaan
+   - Penalaran kritis
+   - Kreativitas
+   - Kolaborasi
+   - Kemandirian
+   - Kesehatan
+   - Komunikasi
+
+🎯 DESAIN PEMBELAJARAN MENDALAM
+1. Capaian Pembelajaran
+2. Menentukan tujuan pembelajaran
+3. Menentukan topik pembelajaran yang kontekstual dan relevan
+4. Mengintegrasikan lintas disiplin ilmu yang relevan dengan topik
+5. Menentukan kerangka pembelajaran:
+   - Praktis pedagogis
+   - Kemitraan pembelajaran
+   - Lingkungan pembelajaran
+   - Pemanfaatan digital
+
+📚 PENGALAMAN BELAJAR
+1. Merancang pembelajaran dengan prinsip:
+   - Berkesadaran
+   - Bermakna
+   - Menggembirakan
+2. Merancang tahapan pembelajaran dengan langkah-langkah:
+   - Kegiatan awal
+   - Kegiatan inti
+   - Kegiatan penutup
+3. Mendeskripsikan pengalaman belajar:
+   - Memahami
+   - Mengaplikasi
+   - Merefleksi
+
+📝 ASESMEN PEMBELAJARAN
+1. Asesmen pada awal pembelajaran
+2. Asesmen pada proses pembelajaran
+3. Asesmen pada akhir pembelajaran
+
+📄 DOKUMENTASI DAN PENILAIAN
+- LKPD lengkap dengan jawaban
+- Penilaian sesuai dengan LKPD
+- Refleksi siswa
+
+Silakan lengkapi bagian isi konten sesuai konteks pembelajaran di sekolah masing-masing.`;
+
+      document.getElementById("output").value = rpp;
+    }
+  </script>
+
+</body>
+</html>
+add generator rpp web
